@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            background: url(digital.jpg);
+            background-size: cover;
+            height: 447px;
+            width: 1484px;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+
+        div>img {
+            margin: 5px 0px;
+            height: 85px;
+        }
+
+        #hour {
+            height: 197px;
+            width: 193px;
+            background-color: #f2813c;
+            position: absolute;
+            top: 289px;
+            right: 800px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #minute {
+            height: 197px;
+            width: 193px;
+            background-color: #f2813c;
+            position: absolute;
+            top: 289px;
+            right: 500px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #box {
+            height: 35px;
+            width: 35px;
+            background-color: #f2813c;
+            position: absolute;
+            top: 266px;
+            right: 1047px;
+        }
+
+        #minutes {
+            font-size: 171px;
+            font-family: serif
+        }
+
+        #hours {
+            font-size: 171px;
+            font-family: serif
+        }
+
+        #am {
+            height: 20px;
+            width: 20px;
+            border-radius: 1000px;
+            background-color: black;
+            position: absolute;
+            top: 273px;
+            right: 1054px;
+        }
+
+        #pm {
+            height: 20px;
+            width: 20px;
+            border-radius: 1000px;
+            background-color: black;
+            position: absolute;
+            top: 314px;
+            right: 1054px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="Clocklogo.png" alt="Clock.com">
+    </div>
+    <span id="box"></span>
+    <span id="am"></span>
+    <span id="pm"></span>
+    <span id="hour">
+        <span id="hours"></span>
+    </span>
+    <span id="minute">
+        <span id="minutes">
+        </span>
+    </span>
+</body>
+<script>
+    setInterval(() => {
+        let dt = new Date();
+        if (dt.getMinutes() < 10)
+            minutes.innerHTML = "0" + dt.getMinutes();
+        else
+            minutes.innerHTML = dt.getMinutes();
+    });
+    setInterval(() => {
+        let dt = new Date();
+        if (dt.getHours() < 12)
+            pm.style.display = 'none';
+        else
+            am.style.display = 'none';
+        if (dt.getHours() < 10)
+            hours.innerHTML = "0" + dt.getHours();
+        else
+            hours.innerHTML = dt.getHours();
+    });
+</script>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <style>
+        body {
+            background: url(analogp2.jpg);
+            background-size: cover;
+            height: 95vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+
+        div>img {
+            margin: 5px 0px;
+            height: 85px;
+        }
+
+        #hide_circle {
+            height: 12rem;
+            width: 9rem;
+            border-radius: 100%;
+            position: absolute;
+            top: 38%;
+            right: 43%;
+            background-color: #e9ebe8;
+        }
+
+        #mid_circle {
+            height: 1.4rem;
+            width: 1.4rem;
+            border-radius: 100%;
+            background-color: #4f363e;
+            position: absolute;
+            top: 47%;
+            right: 49%;
+        }
+
+        #hour {
+            height: 5rem;
+            width: 0.45rem;
+            background-color: #4f363eeb;
+            position: absolute;
+            top: 48.3%;
+            right: 49.55%;
+            transform-origin: top;
+        }
+
+        #minute {
+            height: 7.5rem;
+            width: 0.3rem;
+            background-color: #4f363eeb;
+            position: absolute;
+            top: 48.3%;
+            right: 49.55%;
+            transform-origin: top;
+        }
+
+        #second {
+            height: 9rem;
+            width: 0.15rem;
+            background-color: #4f363eeb;
+            position: absolute;
+            top: 48.3%;
+            right: 49.55%;
+            transform-origin: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="Clocklogo.png" alt="Clock.com">
+    </div>
+    <div id="hide_circle"></div>
+    <div id="mid_circle"></div>
+    <div id="hour"></div>
+    <div id="minute"></div>
+    <div id="second"></div>
+</body>
+<script>
+    setInterval(() => {
+        let d = new Date();
+        let h = (((d.getHours() * 30) + (d.getMinutes() / 2) + d.getSeconds() / 120) - 180) + "deg";
+        let m = (((d.getMinutes() * 6) + (d.getSeconds() / 10)) - 180) + "deg";
+        let s = ((d.getSeconds() * 6) - 180) + "deg";
+        hour.style.transform = "rotate(" + h + ")";
+        minute.style.transform = "rotate(" + m + ")";
+        second.style.transform = "rotate(" + s + ")";
+    }, 1000);
+
+</script>
+
+</html>

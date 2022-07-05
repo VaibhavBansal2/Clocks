@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Clock.com</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+/* 
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            } */
+
+            body {
+                background-color: peachpuff;
+            }
+
+            #section {
+                background-color: lavender;
+            }
+
+            nav {
+                background-color: skyblue;
+                margin: 0px;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav>img {
+                margin: 5px 0px;
+                height: 85px;
+            }
+
+            #section {
+                display: flex;
+            }
+
+            section+img {
+                margin-left: 7rem;
+            }
+
+            section>div {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 2rem;
+                padding: 1rem;
+                margin-left: 5rem;
+            }
+
+            #cards {
+                display: flex;
+            }
+
+            #cards:hover {
+                cursor: pointer;
+            }
+
+            #ac {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            #dc {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            .card {
+                padding: 34px;
+                padding-top: 0px;
+                margin: 55px 189px;
+                border-radius: 28px;
+                background: #f2813b;
+                margin-bottom: 20px;
+                color: white;
+                box-shadow: 9px 9px #c03c38;
+            }
+
+            .card img {
+                height: 160px;
+                margin: auto;
+                display: block;
+            }
+
+            a {
+                color: white;
+            }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="Clocklogo.png" alt="Clock.com">
+    </nav>
+    <section id="section">
+        <section>
+            <div>
+                Not in mood to see time at bottom right of your screen ?
+            </div>
+            <div>
+                No worries !!
+            </div>
+            <div>
+                I have two clocks for you :)
+            </div>
+        </section>
+        <img src="SmallClock.png" alt="">
+    </section>
+    <section id="cards">
+        <div class="card">
+            <a href="AnalogClock.html" target="_blank">
+            <!-- <a href="\analog" target="_blank"> -->
+                <img id="ac" src="clock.png" alt="">
+                <h2>Analog Clock</h2>
+            </a>
+        </div>
+        <div class="card">
+            <a href="DigitalClock.html" target="_blank">
+            <!-- <a href=".\Digital" target="_blank"> -->
+                <img id="dc" src="alarm.png" alt="">
+                <h2>Digital Clock</h2>
+            </a>
+        </div>
+    </section>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</html>
